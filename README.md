@@ -21,3 +21,15 @@ menumargin-optimizer/
 ├── README.md
 ├── requirements.txt         # Pinned dependencies (Flask 3.0.3, Gunicorn 22.0.0)
 └── run.py                   # Local development server entry point (127.0.0.1:5000)
+
+Business Rules & Classification Matrix
+Unit-Economics Formulas
+Net Price (HT): dish_price_ttc / (1 + vat_rate)
+
+Effective Cost: dish_cost / (1 - spoilage_rate)
+
+Food Cost %: (effective_cost / net_price_ht) * 100
+
+Contribution Margin: net_price_ht - effective_cost
+
+Projected Effective Cost (Wholesale Shock): effective_cost * (1 + wholesale_change_pct)
